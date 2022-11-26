@@ -1,4 +1,4 @@
-# Dillinger
+# 
 
 ## Intro
 
@@ -11,7 +11,8 @@ The amount of colors can be determined by the user.
 ## Implementation
 ### Representation and coloring definitions:
 - Graph - Represented as adjecency matrix (symmetric, with zeros on the diagonals)
-- We included a package which draws the "best" solution the algorithm finds. I.E: 
+- We included a package which draws the "best" solution the algorithm finds. I.E: ![WhatsApp Image 2022-11-26 at 12 39 20 PM](https://user-images.githubusercontent.com/63665467/204087891-a34e5d22-43f6-4024-8e96-39b82739212d.jpeg)
+
 
 Evolutionary definitions:
 - Phenotype - array with a cell for each vertex. the value each cell holds is the color of the cell.

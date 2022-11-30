@@ -4,12 +4,22 @@ from eckity.genetic_operators.selections.tournament_selection import TournamentS
 from eckity.statistics.best_average_worst_statistics import BestAverageWorstStatistics
 from eckity.subpopulation import Subpopulation
 
-from utils import GraphColoringCreator, TSPEvaluator, ColoringMutation, ColoringCrossover, draw_graph_with_solution, generate_random_graph
+from utils import GraphColoringCreator, TSPEvaluator, ColoringMutation, ColoringCrossover, generate_random_graph, \
+    draw_graph_with_solution
 
 
 def main():
-
-    graph_matrix = generate_random_graph(20)
+    graph_matrix = \
+        [[0, 0, 1, 1, 1, 0, 1, 0, 1, 1],
+         [0, 0, 1, 1, 0, 1, 1, 0, 0, 1],
+         [1, 1, 0, 0, 1, 1, 0, 0, 0, 0],
+         [1, 1, 0, 0, 0, 0, 0, 0, 1, 0],
+         [1, 0, 1, 0, 0, 0, 1, 1, 1, 1],
+         [0, 1, 1, 0, 0, 0, 1, 0, 0, 0],
+         [1, 1, 0, 0, 1, 1, 0, 0, 1, 1],
+         [0, 0, 0, 0, 1, 0, 0, 0, 1, 0],
+         [1, 0, 0, 1, 1, 0, 1, 1, 0, 1],
+         [1, 1, 0, 0, 1, 0, 1, 0, 1, 0]]
 
     print('running on graph {}'.format(graph_matrix))
 
@@ -44,12 +54,10 @@ def main():
     algo.evolve()
     print("#####################################")
 
-    print("The Ultimate solution found by our solver is (solution and fitness score)")
-    algo.finish()
-    solution = algo.best_of_run_.vector
-    print(f"Amount of colors in the solution is {len(set(solution))}")
-    #draw_graph_with_solution(solution, graph_matrix)
-
+    print(f"Best solution found: \nSolution: {algo.best_of_run_.vector}")
+    print(f"number of collisions: {algo.best_of_run_.fitness.fitness}")
+    print(f"Amount of colors in the solution is {len(set(algo.best_of_run_.vector))}")
+    draw_graph_with_solution(algo.best_of_run_.vector, graph_matrix)
 
 
 if __name__ == '__main__':

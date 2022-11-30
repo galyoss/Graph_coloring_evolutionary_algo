@@ -1,7 +1,6 @@
 import random
 
-MAX_COLORS=10
-
+MAX_COLORS = 5
 
 COLOR_MAP = {
     0: "blue",
@@ -15,4 +14,3 @@ COLOR_MAP = {
     8: "pink",
     9: "purple"
 }
-

@@ -24,10 +24,12 @@ there is no need for validation on the Phenotype, as there is no "illegal colori
 If nodes v,u are neighbors and have the same color, we count this as 1 collision.
 - Initial population - random arrays with their length set to amount of vertices, with random colors (Up to the amount of colors set by the user)
 
-- Used operators
--- Crossover - Taking two individuals from the population, we cut their color arrays, and mix between the two.
+Used operators:
+
+- Crossover - Taking two individuals from the population, we cut their color arrays, and mix between the two.
 ![Screenshot 2023-01-14 at 11 14 31](https://user-images.githubusercontent.com/63665467/212464927-af77571b-86de-494c-abc2-ca6e96abc839.png)
--- Mutation - For the new generation created by crossover, we'll mutate each entity with probability of 0.05. mutation is implemeted by a random index, and assigning it a random color.
+
+- Mutation - For the new generation created by crossover, we'll mutate each entity with probability of 0.05. mutation is implemeted by a random index, and assigning it a random color.
 ![Screenshot 2023-01-14 at 11 15 07](https://user-images.githubusercontent.com/63665467/212464944-8337daff-b6cb-43aa-a01f-cc3e1bb26e84.png)
 - Selection - Tournament based, using size of 4
 
@@ -71,4 +73,5 @@ number of collisions: 0
 Amount of colors in the solution is 5
 ```
 - We'll also get a view of the colored graph:
+
 ![Screenshot 2023-01-14 at 11 33 07](https://user-images.githubusercontent.com/63665467/212465545-e51e44c9-a908-4111-99c6-ce198ffeeed8.png)

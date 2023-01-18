@@ -3,7 +3,7 @@
 ## Intro
 
 In graph theory, coloring is the process of labeling each vertex with a color.
-We define "collision" as a case where 2 neighbor vetrices are labeled with the same color.
+We define "collision" as a case where 2 neighbor vertices are labeled with the same color.
 Coloring problem is useful in the area of computer science, as it can be a reduction to real-world problems taken from many worlds: networks, constuction/civil engineering, design and more.
 The project's objective is to find a coloring for a given graph, with minimum collisions, using evolutionary algorithm.
 The amount of colors can be determined by the user.
@@ -41,10 +41,10 @@ Used operators:
 - Swap the graph_matrix parameter to a value of your choosing.
 - Under `consts.py`, change pramater MAX_COLORS to desired value.
 Note: inserted matrix should be:
--- 2D, [n,n] array.
--- Containing only zeros and ones.
--- symmetric, with 0 on the diagonal
--- Entry [i,j] == 1 IFF there is an edge from vertex i to vertex j.
+- 2D, [n,n] array.
+- Containing only zeros and ones.
+- symmetric, with 0 on the diagonal
+- Entry [i,j] == 1 IFF there is an edge from vertex i to vertex j.
 - Feel free to change the max_generation and population_size variables to any positive integer.
 - Run the script. The result and a figure with the colored graph will be presented.
 
